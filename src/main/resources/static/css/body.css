@@ -1,0 +1,66 @@
+.addLensButton{
+	background-color: rgb(224, 165, 2);
+	border: 3px solid rgb(189, 140, 4);
+	padding: 3px 7px;
+	text-align: center;
+	display: inline-block;
+	font-size: 24px;
+}
+
+span.addLensButtonText a {
+	color: white;
+}
+
+.deleteLensButton{
+	background-color: rgb(255, 0, 0);
+	border: 2px solid rgb(204, 0, 0);
+	padding: 3px 7px;
+	text-align: center;
+	display: inline-block;
+	font-size: 18px;
+}
+
+span.deleteLensButtonText a {
+	color: white;
+}
+
+.editLensButton{
+	background-color: rgb(191, 191, 191);
+	border: 2px solid rgb(179, 179, 179);
+	padding: 3px 7px;
+	text-align: center;
+	display: inline-block;
+	font-size: 18px;
+}
+
+span.editLensButtonText a {
+	color: white;
+}
+
+.table th {
+	text-align: center;
+	font-size: 17px;
+	border-top: 0.5px solid black;
+	border-left: 0.5px solid black;
+	border-right: 0.5px solid black;
+}
+
+.table th, td {
+  border-bottom: 0.5px solid black;
+}
+
+.table tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+.table td:nth-child(1) {
+	border-left: 0.5px solid black;
+}
+
+.table td:nth-child(11)  {
+	border-right: 0.5px solid black;
+}
+
+span.goldLensCount {
+	color: rgb(224, 165, 2);;
+}

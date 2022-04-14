@@ -1,0 +1,49 @@
+/* Below the nav bar properties */
+.navigationBar {
+	background-color: rgb(130, 130, 130);
+	text-align: center;
+	padding: 10px;
+}
+/* Below the nav text properties */
+.navigationText a {
+	font-family: monospace;
+	font-weight: 500;
+	font-size: 2.5em;
+	padding-left: 12.5px;
+	padding-right: 12.5px;
+	display: inline;
+}
+
+span.navCurrentUser  {
+	text-align: top;
+	float: right;
+}
+
+span.navCurrentUser p {
+	margin:0px;
+}
+
+span.a a {
+	color: rgb(255, 209, 41);
+}
+/* Below are nav link attributes*/
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  background-color: rgb(224, 165, 2);
+  text-decoration: underline;
+  color: rgb(0, 0, 0);
+}

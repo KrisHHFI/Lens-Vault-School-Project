@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Lens</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Add Lens</h1>
+	<div>
+		<form th:object="${newLens}" th:action="@{save}" action="#" method="post">
+			<!--Book attribute inputs-->
+			<label for="id"></label>
+			<input type="hidden" id="id" th:field="*{id}" readonly="readonly"/>
+			
+		  	<label
+				for="title">Manufacturer</label> <input type="text"
+				id="manufacturer" th:field="*{manufacturer}" />
+			<div style="clear: both; display: block; height: 10px;"></div>
+			<label for="name">Name</label> <input type="text" id="name"
+				th:field="*{name}" />
+			<div style="clear: both; display: block; height: 10px;"></div>
+			<label for="focal length">Focal length</label> <input type="text"
+				id="focalLength" th:field="*{focalLength}" />
+			<div style="clear: both; display: block; height: 10px;"></div>
+			<label for="largest aperture">Largest Aperture</label> <input
+				type="text" id="largestAperture" th:field="*{largestAperture}" />
+			<div style="clear: both; display: block; height: 10px;"></div>
+			<label for="smallest aperture">Smallest Aperture</label> <input
+				type="text" id="smallestAperture" th:field="*{smallestAperture}" />
+			<div style="clear: both; display: block; height: 10px;"></div>
+
+			<!--Filled Prime/Zoom dropdown menu-->
+			<label for="primeOrZoomlist">Prime/Zoom</label> <select
+				id="PrimeOrZoomlist" th:field="*{primeOrZoom.id}"
+				class="form-control">
+				<option th:each="PrimeOrZoom: ${primeOrZoomRepositoryCategories}"
+					th:value="${PrimeOrZoom.id}" th:text="${PrimeOrZoom.name}">
+				</option>
+			</select>
+
+			<div style="clear: both; display: block; height: 10px;"></div>
+			<!--Filled Prime/Zoom dropdown menu-->
+			<label for="mountlist">Mount</label> <select id="Mountlist"
+				th:field="*{mount.id}" class="form-control">
+				<option th:each="Mount: ${mountCategories}" th:value="${Mount.id}"
+					th:text="${Mount.name}"></option>
+			</select>
+			<div style="clear: both; display: block; height: 10px;"></div>
+
+			<label for="countryOfOrigin">Country Of Origin</label> <input
+				type="text" id="countryOfOrigin" th:field="*{countryOfOrigin}" />
+			<div style="clear: both; display: block; height: 10px;"></div>
+
+			<label for="yearProduced">Year Produced</label> <input type="text"
+				id="yearProduced" th:field="*{yearProduced}" />
+			<div style="clear: both; display: block; height: 10px;"></div>
+
+			<label for="serialNumber">Serial Number</label> <input type="text"
+				id="serialNumber" th:field="*{serialNumber}" />
+			<div style="clear: both; display: block; height: 10px;"></div>
+
+			<label for="comment">Serial Number</label> <input type="text"
+				id="comment" th:field="*{comment}" />
+			<div style="clear: both; display: block; height: 10px;"></div>
+			<input type="submit" value="Save"></input>
+		</form>
+	</div>
+</body>
+</html>

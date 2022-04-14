@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<title>Overview</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link type="text/css" rel="stylesheet" href="/css/navigationBarStylesheet.css"/>
+<link type="text/css" rel="stylesheet" href="/css/body.css"/>
+<link type="text/css" rel="stylesheet" href="/css/navigationBarStylesheet.css"/>
+</head>
+<body>
+<!-- Navigation Bar -->
+	<div class="navigationBar">
+		<div class="navigationText">
+		<span class="a"><a href="/home">Overview</a></span>
+			<a href="/inventory">Inventory</a>
+		<!-- Displays the currently active username -->
+		<span class="navCurrentUser"><p>[[${#httpServletRequest.remoteUser}]] logged in.</p>
+<!-- Logs the active user out -->
+		<form th:action="@{/logout}" method="post">
+			<input type="submit" value="Sign Out"/>
+		</form>
+		</span>
+		</div>
+	</div>
+	<h2>Highlights</h2>
+	<ul>
+	  <li>You have <span class="goldLensCount"><span th:text="${lensCount}"></span></span> lenses.</li>
+	  <li>Your largest aperture is F/<span class="goldLensCount"><span th:text="${largestAperture}"></span></span>.</li>
+	  <li>Your widest focal length is <span class="goldLensCount"><span th:text="${widestFocalLength}"></span>mm</span>.</li>
+	  <li>Your most narrow focal length is <span class="goldLensCount"><span th:text="${mostNarrowFocalLength}"></span>mm</span>.</li>
+	</ul>
+	<h2>Quick Overview</h2>
+	
+	<!--An interactive lens table -->
+	<table class="table">
+		<tr>
+			<!--Column titles -->
+			<th>Manufacturer</th>
+			<th>Focal length</th>
+			<th>Largest Aperture</th>
+		</tr>
+		<!--A list of fetched lenses, each attribute fills column -->
+		<tr th:each="lens : ${lenses}">
+			<td th:text="${lens.manufacturer}"></td>
+			<td th:text="${lens.focalLength}+mm"></td>
+			<td th:text="${lens.largestAperture}"></td>
+		</tr>
+	</table>
+	
+</body>
+</html>
