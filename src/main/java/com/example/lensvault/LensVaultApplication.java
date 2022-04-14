@@ -31,6 +31,7 @@ public class LensVaultApplication {
 			UserRepository urepository, MountRepository mountRepository) {
 		return (args) -> {
 			// objects created
+			/*
 			System.out.println("Preloaded categories created");
 			primeOrZoomRepository.save(new PrimeOrZoom("Prime"));
 			primeOrZoomRepository.save(new PrimeOrZoom("Zoom"));
@@ -90,7 +91,7 @@ public class LensVaultApplication {
 					"admin@evilcorp.com");
 			urepository.save(user1);
 			urepository.save(user2);
-			
+			*/
 			System.out.println("fetch all lenses");
 			for (Lens lens : lensRepository.findAll()) {
 				System.out.println(lens.toString());
