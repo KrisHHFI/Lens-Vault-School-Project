@@ -2,7 +2,7 @@
 
 Check out the [demo video](https://youtu.be/pXikjzzvdjY).
 
-### launch The App
+### Launch The App
 
 Run the app in editor.
 
